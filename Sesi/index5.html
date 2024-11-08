@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
+        <h1>Gerenciamento de Tarefas</h1>
+        <ul>
+            <li><a href="index1.html" aria-label="Ir para o Cadastro de Usuários" tabindex="0">Cadastro de Usuários</a></li>
+            <li><a href="index2.html" aria-label="Ir para o Cadastro de Tarefas" tabindex="0">Cadastro de Tarefas</a></li>
+            <li><a href="index3.html" aria-label="Ir para Gerenciar Tarefas" tabindex="0">Gerenciar Tarefas</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container" aria-labelledby="cadastroTarefasTitle">
+        <h2 id="cadastroTarefasTitle">Cadastro de Tarefas</h2>
+        <form id="taskForm" novalidate>
+            <legend>Tarefas</legend>
+
+            <fieldset>
+
+                <div class="form-group">
+                    <label for="description">Descrição:</label>
+                    <input type="text" id="description" name="description" placeholder="Digite a descrição da tarefa" required aria-describedby="descriptionError" title="A descrição da tarefa é obrigatória">
+                    <span id="descriptionError" class="error" role="alert" aria-live="assertive" style="display: none;">Este campo é obrigatório.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="sector">Setor:</label>
+                    <input type="text" id="sector" name="sector" placeholder="Digite o setor responsável" required aria-describedby="sectorError" title="O setor responsável é obrigatório">
+                    <span id="sectorError" class="error" role="alert" aria-live="assertive" style="display: none;">Este campo é obrigatório.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="user">Usuário:</label>
+                    <select id="user" name="user" required aria-describedby="userError" title="Selecione um usuário">
+                        <option value="">Selecione um usuário</option>
+                    </select>
+                    <span id="userError" class="error" role="alert" aria-live="assertive" style="display: none;">Por favor, selecione um usuário.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Prioridade:</label>
+                    <select id="priority" name="priority" required title="Selecione a prioridade da tarefa">
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
